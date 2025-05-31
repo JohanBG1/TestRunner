@@ -8,9 +8,13 @@ public class CarController : MonoBehaviour
     [SerializeField] TMP_Text winsText;
     private int wins = 0;
 
-    private void Update()
+    private void Start()
     {
         winsText.text = "Wins: " + wins.ToString();
+    }
+
+    private void Update()
+    {
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
             transform.Translate(0, 1 * MoveSpeed * Time.deltaTime, 0);
@@ -18,7 +22,7 @@ public class CarController : MonoBehaviour
 
         else if(Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
-            transform.Translate(0, 1 * MoveSpeed * Time.deltaTime, 0);
+            transform.Translate(0, -1 * MoveSpeed * Time.deltaTime, 0);
         }
 
         if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
@@ -33,9 +37,11 @@ public class CarController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("Hit");
         if (other.gameObject.tag == "FinshLine")
         {
             wins++;
+            winsText.text = "Wins: " + wins.ToString();
         }
     }
 }

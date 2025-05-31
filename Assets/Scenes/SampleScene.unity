@@ -1828,7 +1828,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2155,15 +2155,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 108
+  m_fontSizeBase: 108
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -2773,9 +2773,10 @@ GameObject:
   - component: {fileID: 1707243841}
   - component: {fileID: 1707243840}
   - component: {fileID: 1707243842}
+  - component: {fileID: 1707243843}
   m_Layer: 0
   m_Name: Square
-  m_TagString: FinishLine
+  m_TagString: FinshLine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2896,6 +2897,33 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &1707243843
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707243839}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDamping: 0
+  m_AngularDamping: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &1732280744
 GameObject:
   m_ObjectHideFlags: 0
@@ -3373,8 +3401,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f85e3f5052092148ad6a5f695b4768a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RotateSpeed: 0
-  MoveSpeed: 0
+  RotateSpeed: 100
+  MoveSpeed: 10
   winsText: {fileID: 1032013757}
 --- !u!1 &1968656652
 GameObject:
@@ -3588,7 +3616,7 @@ Transform:
   m_GameObject: {fileID: 2002783268}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.9999525, w: -0.009756262}
-  m_LocalPosition: {x: -1.2, y: -23.1, z: 1.1841713}
+  m_LocalPosition: {x: 0.47, y: -23.1, z: 1.1841713}
   m_LocalScale: {x: 17.114466, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3637,7 +3665,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4274,6 +4302,10 @@ PrefabInstance:
     - target: {fileID: 813831371868626989, guid: dd950bcba930e46468f3299b9820ec7c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2581297880739856143, guid: dd950bcba930e46468f3299b9820ec7c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7189924135479397776, guid: dd950bcba930e46468f3299b9820ec7c, type: 3}
       propertyPath: m_Name
