@@ -9,12 +9,12 @@ public class CarController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
-            transform.position += transform.forward * moveSpeed * Time.deltaTime;
+            transform.Translate(0, 1 * moveSpeed * Time.deltaTime, 0);
         }
 
         else if(Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
-            transform.position -= transform.forward * moveSpeed * Time.deltaTime;
+            transform.Translate(0, 1 * moveSpeed * Time.deltaTime, 0);
         }
     }
 
