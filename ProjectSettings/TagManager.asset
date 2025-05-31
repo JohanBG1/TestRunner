@@ -42,5 +42,8 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Car
+    uniqueID: 2214116955
+    locked: 0
   m_RenderingLayers:
   - Default
